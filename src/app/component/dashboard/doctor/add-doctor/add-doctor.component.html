@@ -10,7 +10,7 @@
           <mat-form-field>
             <mat-label>Full name</mat-label>
             <input matInput
-                    placeholder="Ex. code logic"
+                    placeholder="Your Name"
                     formControlName="name"
                     required>
             <mat-error *ngIf="form.get('name')?.invalid || form.get('name')?.dirty || form.get('name')?.touched">Enter full name</mat-error>
@@ -19,7 +19,7 @@
           <mat-form-field>
             <mat-label>Mobile number : </mat-label>
             <input matInput
-                    placeholder="9865452152"
+                    placeholder="9XXXXXXXXX"
                     formControlName="mobile"
                     required>
             <mat-error *ngIf="form.get('mobile')?.invalid || form.get('mobile')?.dirty || form.get('mobile')?.touched">Enter valid mobile number</mat-error>
@@ -28,7 +28,7 @@
           <mat-form-field>
             <mat-label>Email</mat-label>
             <input matInput
-                    placeholder="pat@example.com"
+                    placeholder="Unified@xyz.com"
                     formControlName="email"
                     required>
             <mat-error *ngIf="form.get('email')?.invalid || form.get('email')?.dirty || form.get('email')?.touched">Enter valid email address </mat-error>

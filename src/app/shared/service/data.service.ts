@@ -49,4 +49,26 @@ export class DataService {
   getPatientById(id : any) {
     return this.afs.doc("Patient/"+id).valueChanges();
   }
+
+
+  addReceptionist(receptionist : any) {
+    receptionist.id = this.afs.createId();
+    return this.afs.collection("Receptionist/").add(receptionist);
+  }
+
+  getAllReceptionists() {
+    return this.afs.collection("Receptionist/").snapshotChanges();
+  }
+
+  updateReceptionist(receptionist : any) {
+    return this.afs.doc("Receptionist/"+receptionist.id).update(receptionist);
+  }
+
+  deleteReceptionist(id : string) {
+    return this.afs.doc("Receptionist/"+id).delete();
+  }
+
+  getReceptionistById(id : any) {
+    return this.afs.doc("Receptionist/"+id).valueChanges();
+  }
 }
